@@ -1,0 +1,16 @@
+apiversion: v1
+kind: Config
+clusters:
+- cluster:
+    server: https://192.168.99.100:8443
+    certificate-authority: /root/ca.crt
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    user: souvik
+users:
+- name: souvik
+  user:
+    client-key: /root/client.key
+    client-certificate: /root/client.crt
